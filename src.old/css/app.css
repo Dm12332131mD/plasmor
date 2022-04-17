@@ -1,0 +1,137 @@
+#app {
+    display: flex;
+    height: calc(100vh - 25px);
+    width: 100vw;
+}
+
+#app-content {
+    background-color: var(--color-background);
+    border-right: 1px solid var(--color-background-dark);
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+    width: calc(100% - 200px);
+}
+
+#app-chat {
+    border-top: 2px solid var(--color-background-dark);
+    display: flex;
+    height: calc(5% + 100px);
+    width: 100%;
+}
+
+#app-chat-message {
+    background-color: var(--color-background-light);
+    border: 1px solid var(--color-background-dark);
+    border-radius: 5px;
+    color: var(--color-foregrond);
+    cursor: auto;
+    flex: 1;
+    font-family: "oxygen", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 10px;
+    padding: 5px 10px;
+    resize: none;
+    overflow-y: auto;
+}
+
+#app-chat-send {
+    background-color: transparent;
+    border: 1px solid var(--color-theme);
+    border-radius: 5px;
+    color: var(--color-theme);
+    font-size: 15px;
+    font-weight: 400;
+    margin: 10px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    width: 100px;
+}
+
+#app-chat-send:hover, #app-chat-send:focus {
+    background-color: var(--color-theme);
+    color: var(--color-background);
+}
+
+#app-messages {
+    overflow-y: auto;
+    margin: 10px 20px;
+}
+
+.app-message h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+
+.app-message img {
+    margin-top: 5px;
+    max-height: 500px;
+    max-width: 300px;
+}
+
+.app-message p {
+    margin: 5px 0px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+#app-list {
+    background-color: var(--color-background);
+    border-left: 1px solid var(--color-background-dark);
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+#app-server {
+    align-items: center;
+    border-bottom: 1px solid var(--color-background-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+}
+
+#app-server h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px 0px;
+}
+
+#app-server button {
+    background-color: transparent;
+    border: 1px solid var(--color-theme);
+    border-radius: 5px;
+    color: var(--color-theme);
+    margin: 5px 0px;
+    padding: 5px 10px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#app-server button:hover, #app-server button:focus {
+    background-color: var(--color-theme);
+    color: var(--color-background);
+}
+
+#app-members {
+    border-top: 1px solid var(--color-background-dark);
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#app-members ul {
+    list-style: none;
+}
+
+#app-members ul li {
+    font-size: 15px;
+    font-weight: 400;
+    margin: 5px 15px;
+    padding: 5px 0px;
+}
+
+#app-members ul li:not(:last-child) {
+    border-bottom: 2px solid var(--color-background-dark);
+}

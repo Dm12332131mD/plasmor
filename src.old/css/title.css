@@ -1,0 +1,50 @@
+#menu {
+    background-color: var(--color-theme);
+    filter: drop-shadow(0px 0px 5px var(--color-foreground-dark));
+    height: 25px;
+    width: 100%;
+    user-select: none;
+    -webkit-app-region: drag;
+}
+
+#menu-title {
+    align-items: center;
+    margin: 0px 10px;
+    display: flex;
+    float: left;
+}
+
+#menu-icon {
+    height: 25px;
+    width: 25px;
+}
+
+#menu-name {
+    color: var(--color-background);
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+#menu-buttons {
+    display: flex;
+    float: right;
+    -webkit-app-region: no-drag;
+}
+
+#menu-buttons button {
+    background-color: transparent;
+    border: none;
+    height: 25px;
+    transition: background-color 0.2s ease;
+    width: 25px;
+}
+
+#menu-buttons button:hover, #menu-buttons button:focus {
+    background-color: var(--color-theme-light);
+}
+
+#menu-buttons button img {
+    height: 15px;
+    width: 15px;
+}

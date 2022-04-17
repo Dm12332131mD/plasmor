@@ -1,0 +1,66 @@
+/* Navigator */
+nav {
+    align-items: center;
+    background-color: var(--color-theme);
+    display: flex;
+    filter: drop-shadow(0px 0px 5px var(--color-foreground));
+    height: 25px;
+    justify-content: space-between;
+    user-select: none;
+    width: 100%;
+    -webkit-app-region: drag;
+}
+
+/* Icon & Title */
+#nav-icon {
+    display: flex;
+    flex: 1;
+}
+
+#nav-icon img {
+    height: 25px;
+    margin: 0px 5px 0px 10px;
+    width: 25px;
+}
+
+#nav-icon h1, #nav-title h1 {
+    color: var(--color-background);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+#nav-title {
+    text-align: center;
+    flex: 1;
+}
+
+/* Buttons */
+#nav-buttons {
+    flex: 1;
+}
+
+#nav-buttons ul {
+    display: flex;
+    float: right;
+    list-style: none;
+}
+
+#nav-buttons button {
+    background-color: transparent;
+    border: none;
+    height: 25px;
+    transition: background-color 0.2s ease;
+    width: 25px;
+    -webkit-app-region: no-drag;
+}
+
+#nav-buttons button:focus, #nav-buttons button:hover {
+    background-color: var(--color-theme-light);
+    cursor: pointer;
+}
+
+#nav-buttons img {
+    height: 15px;
+    width: 15px;
+}

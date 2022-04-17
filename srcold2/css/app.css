@@ -1,0 +1,155 @@
+/* Global */
+#app {
+    display: flex;
+    height: calc(100vh - 25px);
+}
+
+/* Global - Main */
+#app-main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: calc(100% - 202px);
+}
+
+/* Messages */
+#app-messages {
+    display: flex;
+    flex: 1;
+    flex-direction: column-reverse;
+    overflow-y: auto;
+}
+
+/* Chat */
+#app-chat-container {
+    align-items: center;
+    background-color: var(--color-background);
+    clip-path: polygon(0% -100vh, 100% -100vh, 100% 100%, 0% 100%);
+    display: flex;
+    filter: drop-shadow(0px 0px 5px var(--color-foreground-dark));
+    height: 100px;
+    justify-content: center;
+}
+
+#app-chat-box {
+    align-items: center;
+    background-color: var(--color-background-light);
+    border: 1px solid var(--color-background-dark);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    height: calc(100% - 20px);
+    width: calc(100% - 40px);
+}
+
+#app-chat-box button {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    height: 100%;
+    margin: 0px 5px;
+    user-select: none;
+    width: 30px;
+}
+
+#app-chat-box img {
+    height: 30px;
+    opacity: 50%;
+    width: 30px;
+    transition: opacity 0.2s ease;
+}
+
+#app-chat-box button:focus img, #app-chat-box button:hover img {
+    opacity: 100%;
+}
+
+#app-chat-content {
+    font-size: 15px;
+    font-weight: 400;
+    height: calc(100% - 10px);
+    line-height: 20px;
+    margin: 0px 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+#app-chat-content:empty::after {
+    color: var(--color-foreground-light);
+    content: "Send a message!";
+}
+
+/* Global - List */
+#app-list {
+    border-left: 2px solid var(--color-background-dark);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    user-select: none;
+    width: 200px;
+}
+
+/* Server */
+#app-server {
+    align-items: center;
+    background-color: var(--color-background);
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: center;
+}
+
+#app-server h2 {
+    color: var(--color-foreground);
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px 0px;
+}
+
+#app-server p {
+    color: var(--color-foreground-light);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+#app-server button {
+    background-color: transparent;
+    border: 1px solid var(--color-theme);
+    border-radius: 5px;
+    color: var(--color-theme);
+    font-size: 15px;
+    font-weight: 400;
+    height: 30px;
+    padding: 5px 10px;
+    margin: 5px 0px;
+    transition: background-color 0.2s ease, color 0.2s ease, width 0.2s ease;
+    width: 75px;
+}
+
+#app-server button:focus, #app-server button:hover {
+    background-color: var(--color-theme);
+    color: var(--color-background);
+    width: 100px;
+}
+
+/* Members */
+#app-members {
+    background-color: var(--color-background-light);
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#app-members ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 5px;
+}
+
+#app-members ul li {
+    margin-bottom: 5px;
+}

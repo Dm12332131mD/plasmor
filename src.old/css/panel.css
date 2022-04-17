@@ -1,0 +1,174 @@
+#panel {
+    display: flex;
+    height: calc(100vh - 25px);
+}
+
+#panel-left {
+    display: flex;
+    flex-direction: column-reverse;
+    width: calc(100% - 250px);
+    border-right: 1px solid var(--color-background-dark);
+}
+
+#panel-content {
+    border-bottom: 1px solid var(--color-background-dark);
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 10px;
+    overflow-y: auto;
+}
+
+#panel-content::-webkit-scrollbar {
+    width: 4px;
+}
+
+#panel-content::-webkit-scrollbar-track {
+    background-color: var(--color-background);
+    height: 100%;
+    width: 100%;
+}
+
+#panel-content::-webkit-scrollbar-thumb {
+    background-color: var(--color-theme-light);
+    border-radius: 5px;
+    width: 100%;
+}
+
+#panel-content::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-theme-highlight);
+}
+
+.panel-content-message {
+    margin: 10px 20px;
+}
+
+.panel-content-data {
+    display: flex;
+    margin: 5px 0px;
+}
+
+.panel-content-username {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.panel-content-timestamp::before {
+    content: "-";
+    margin: 0px 5px;
+}
+
+.panel-content-timestamp {
+    color: var(--color-foregrond);
+}
+
+.panel-content-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-content-content > * {
+    margin: 5px 0px;
+}
+
+.panel-content-content > a {
+    color: var(--color-theme-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.panel-content-content > a:hover {
+    color: var(--color-theme-highlight);
+    text-decoration: underline;
+}
+
+.panel-content-content > p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    word-wrap: break-word;
+}
+
+.panel-content-content > img {
+    max-height: 250px;
+    max-width: 250px;
+}
+
+#panel-message {
+    background-color: var(--color-background);
+    border-top: 1px solid var(--color-background-dark);
+    align-items: center;
+    padding: 10px;
+    display: flex;
+}
+
+#panel-message-input {
+    background-color: var(--color-background-light);
+    border: 1px solid var(--color-background-dark);
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0px 10px;
+    max-height: 200px;
+    width: calc(100% - 92px);
+    overflow-y: auto;
+}
+
+#panel-message-input:empty::before {
+    color: var(--color-foreground-lighter);
+    content: "Send a message"
+}
+
+#panel-message-input:hover {
+    cursor: text;
+}
+
+#panel-message-input::-webkit-scrollbar {
+    width: 4px;
+}
+
+#panel-message-input::-webkit-scrollbar-track {
+    background-color: var(--color-background);
+    height: 100%;
+    width: 100%;
+}
+
+#panel-message-input::-webkit-scrollbar-thumb {
+    background-color: var(--color-theme-light);
+    border-radius: 5px;
+    width: 100%;
+}
+
+#panel-message-input::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-theme-highlight);
+}
+
+#panel-message-send {
+    background-color: transparent;
+    border: 1px solid var(--color-background-dark);
+    border-radius: 5px;
+    color: var(--color-foregrond);
+    font-size: 12px;
+    font-weight: 700;
+    height: 100%;
+    padding: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    width: 50px;
+}
+
+#panel-message-send:hover {
+    background-color: var(--color-background-dark);
+    color: var(--color-background-light);
+    cursor: pointer;
+}
+
+#panel-right {
+    background-color: var(--color-background);
+    border-left: 1px solid var(--color-background-dark);
+    width: 250px;
+}
+
+#panel-server {
+    background-color: var(--color-background-dark);
+    height: 10%;
+}

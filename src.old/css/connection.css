@@ -1,0 +1,68 @@
+#connection {
+    display: none;
+    margin: 50px 0px;
+}
+
+#connection h1 {
+    color: var(--color-foreground-dark);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.connection-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.connection-input::after {
+    color: var(--color-theme);
+    content: "";
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.connection-input h2 {
+    color: var(--color-foreground-dark);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+.connection-input input {
+    background-color: var(--color-background-light);
+    border: 1px solid var(--color-background-dark);
+    border-radius: 5px;
+    color: var(--color-foreground-dark);
+    height: 20px;
+    margin: 10px 0px;
+    padding: 5px 10px;
+    text-align: center;
+    transition: width 0.2s ease;
+    width: 200px;
+}
+
+.connection-input input:focus {
+    width: 225px;
+}
+
+.connection-input input::placeholder {
+    color: var(--color-foreground-light);
+}
+
+#connection-join {
+    background-color: transparent;
+    border: 1px solid var(--color-theme);
+    border-radius: 5px;
+    color: var(--color-theme);
+    height: 30px;
+    transition: background-color 0.2s ease, color 0.2s ease, width 0.2s ease;
+    width: 100px;
+}
+
+#connection-join:hover, #connection-join {
+    background-color: var(--color-theme);
+    color: var(--color-background-light);
+    width: 120px;
+}

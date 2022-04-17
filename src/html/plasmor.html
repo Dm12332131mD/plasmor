@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="
+            default-src 'self'; style-src-elem *; font-src *;
+            script-src-elem https://code.jquery.com/jquery-3.6.0.min.js 'self';
+        ">
+        <title>Plasmor</title>
+        <link rel="stylesheet" href="../css/main.css" type="text/css">
+        <link rel="stylesheet" href="../css/nav.css" type="text/css">
+        <link rel="stylesheet" href="../css/servers.css" type="text/css">
+        <link rel="stylesheet" href="../css/messages.css" type="text/css">
+        <link rel="stylesheet" href="../css/members.css" type="text/css">
+    </head>
+    <body>
+        <nav>
+            <div id="nav-icon">
+                <img src="../images/icon.png">
+                <h1>Plasmor</h1>
+            </div>
+            <div id="nav-title"><h1>Plasmor - <span id="nav-name"></span></h1></div>
+            <div id="nav-buttons">
+                <ul>
+                    <li><button id="nav-minimize"><img src="../images/minimize.png"></button></li>
+                    <li><button id="nav-maximize"><img id="nav-maximize-icon" src="../images/maximize.png"></button></li>
+                    <li><button id="nav-close"><img src="../images/close.png"></button></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="app">
+            <div id="servers">
+                <h2 id="servers-title">Servers - <span id="servers-servercount"></h2>
+                <hr>
+                <ul></ul>
+                <hr>
+                <div id="servers-buttons">
+                    <button id="servers-create"><h3>Create</h3></button>
+                    <button id="servers-join"><h3>Join</h3></button>
+                </div>
+                <hr>
+                <div id="servers-build">
+                    <p>Electron - <span id="servers-electron"></span></p>
+                    <p>Chrome - <span id="servers-chrome"></span></p>
+                    <p>Node.js - <span id="servers-node"></span></p>
+                    <p>Operating System - <span id="servers-os"></span></p>
+                    <p>Version - <span id="servers-version"></span></p>
+                </div>
+            </div>
+            <div id="messages">
+                <div id="messages-messages">
+                    <div class="messages-message">
+                        <h3 class="messages-username">iiPython</h3>
+                        <p class="messages-paragraph">Honk</p>
+                        <div class="messages-embed">
+                            <div class="messages-embed-bar"></div>
+                            <div class="messages-embed-content">
+                                <img src="../images/icon.png">
+                            </div>
+                        </div>
+                        <p class="messages-paragraph">Very</p>
+                    </div>
+                    <div class="messages-message">
+                        <h3 class="messages-username messages-username-self">iiPython</h3>
+                        <p class="messages-paragraph">Honk</p>
+                        <p class="messages-paragraph">Very</p>
+                    </div>
+                    <div class="messages-date"><h3>April 14, 2022</h3></div>
+                </div>
+                <div id="messages-chat">
+                    <button id="messages-attachment"><img src="../images/attachment.png"></button>
+                    <div id="messages-content-container">
+                        <div id="messages-content-box"><span contenteditable="true"  id="messages-content-text"></span></div></div>
+                    <button id="messages-send"><img src="../images/send.png"></button>
+                </div>
+            </div>
+            <div id="members">
+                <div id="members-server">
+                    <h2 id="members-name"></h2>
+                    <p id="members-description"></p>
+                </div>
+                <hr>
+                <div id="members-fields">
+                    <div class="members-field">
+                        <h3>Username</h3>
+                        <p id="members-username"></p>
+                    </div>
+                    <div class="members-field">
+                        <h3>Address</h3>
+                        <p id="members-address"></p>
+                    </div>
+                </div>
+                <hr>
+                <div id="members-buttons">
+                    <button id="members-invite"><h3>About</h3></button>
+                    <button id="members-leave"><h3>Leave</h3></button>
+                </div>
+                <hr>
+                <h2 id="members-title">Members - <span id="members-membercount"></span></h2>
+                <hr>
+                <ul></ul>
+            </div>
+        </div>
+        <div id="create"></div>
+        <div id="join"></div>
+        <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../js/app.js"></script>
+    </body>
+</html>

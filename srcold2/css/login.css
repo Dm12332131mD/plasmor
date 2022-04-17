@@ -1,0 +1,75 @@
+/* Global */
+#login {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0px;
+    align-items: center;
+}
+
+/* Title */
+#login h2 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 25px;
+    margin: 20px 0px;
+}
+
+/* Fields */
+#login div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+
+#login div input {
+    background-color: var(--color-background-light);
+    border: 1px solid var(--color-background-dark);
+    border-radius: 5px;
+    color: var(--color-foreground);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 10px;
+    height: 20px;
+    margin: 10px 0px;
+    padding: 5px 10px;
+    text-align: center;
+    transition: width 0.2s ease;
+    width: 175px;
+}
+
+#login div input::placeholder {
+    color: var(--color-foreground-light);
+}
+
+#login div::after {
+    color: var(--color-theme);
+    content: "";
+    font-size: 15px;
+    font-weight: 300;
+}
+
+#login div input:focus {
+    width: 200px;
+}
+
+/* Button */
+#login button {
+    background-color: transparent;
+    border: 1px solid var(--color-theme);
+    border-radius: 5px;
+    color: var(--color-theme);
+    font-size: 15px;
+    font-weight: 400;
+    height: 40px;
+    margin: 20px 0px;
+    padding: 5px 10px;
+    transition: background-color 0.2s ease, color 0.2s ease, width 0.2s ease;
+    width: 100px;
+}
+
+#login button:focus, #login button:hover {
+    background-color: var(--color-theme);
+    color: var(--color-background);
+    width: 125px;
+}
